@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Blog</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-content">
+      <h1 class="tech-title"><span class="angle">&lt;</span>CodeSphere<span class="angle">/&gt;</span></h1>
+      <p class="subtitle">A Creative Space for Coders, Makers, and Thinkers</p>
+      <nav class="nav">
+        <a href="index.html" class="nav-link active">Discover</a>
+        <a href="categories.html" class="nav-link">Categories</a>
+        <a href="about.html" class="nav-link">About</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <section class="blog-input">
+    <h2>Share Your Blog Post</h2>
+    <form id="blog-form">
+      <input type="text" id="blog-title" placeholder="Title" required>
+      <input type="text" id="blog-image" placeholder="Image URL (optional)">
+      <input type="text" id="blog-author" placeholder="Author name (optional)">
+      <input type="text" id="blog-tags" placeholder="Tags (comma separated)">
+      <select id="blog-category" required>
+        <option value="Blogging">Blogging</option>
+        <option value="Tech">Tech</option>
+        <option value="Travel">Travel</option>
+        <option value="Food">Food</option>
+        <option value="Lifestyle">Lifestyle</option>
+      </select>
+      <textarea id="blog-content" placeholder="Write your post..." required></textarea>
+      <button type="submit">Add Post</button>
+    </form>
+  </section>
+
+  <div class="blog-controls">
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Search posts...">
+    </div>
+    <div class="category-filter-wrap">
+      <label for="category-filter"><strong>Filter by Category:</strong></label>
+      <select id="category-filter">
+        <option value="All">All</option>
+        <option value="Blogging">Blogging</option>
+        <option value="Tech">Tech</option>
+        <option value="Travel">Travel</option>
+        <option value="Food">Food</option>
+        <option value="Lifestyle">Lifestyle</option>
+      </select>
+    </div>
+    <label class="toggle-switch">
+      <input type="checkbox" id="dark-mode-toggle">
+      <span class="slider"></span>
+      <span class="toggle-label">🌙 Dark Mode</span>
+    </label>
+  </div>
+
+  <section id="featured-post"></section>
+
+  <main class="blog-main">
+    <div class="blog-grid" id="blog-container">
+      <!-- Blog posts injected from JavaScript -->
+    </div>
+    <aside class="sidebar">
+      <div class="recent-posts">
+        <h3>Recent Posts</h3>
+        <ul id="recent-posts-list"></ul>
+      </div>
+      <div class="popular-posts">
+        <h3>Popular Posts</h3>
+        <ul id="popular-posts-list"></ul>
+      </div>
+    </aside>
+  </main>
+
+  <div class="pagination">
+    <button id="load-more">Load More</button>
+  </div>
+
+  <div class="category-filter-wrap">
+    <label for="category-filter"><strong>Filter by Category:</strong></label>
+    <select id="category-filter">
+      <option value="All">All</option>
+      <option value="Blogging">Blogging</option>
+      <option value="Tech">Tech</option>
+      <option value="Travel">Travel</option>
+      <option value="Food">Food</option>
+      <option value="Lifestyle">Lifestyle</option>
+    </select>
+  </div>
+
+  <main id="blog-container" class="blog-grid">
+    <!-- Blog posts injected from JavaScript -->
+  </main>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 My Blog. Powered by your creativity.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
